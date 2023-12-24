@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "2fee41d0-8f6d-4e92-9a5b-8d2f53c7d4e2",
+		"name": "nosql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25180275"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"neslihan\",\r\n    \"name\": \"neslihandogan\",\r\n    \"password\": \"45121\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8082/api/v1/users/658850b653b471391ada728b"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"güncddddddelleme\",\r\n    \"name\": \"güncellemeadı\",\r\n    \"password\": \"451dfgdg21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/api/v1/users/658850b653b471391ada728b"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "addProject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"deneme\",\r\n    \"description\": \"aciklama\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/api/v1/projects/user/658851e853b471391ada728f"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProject",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8082/api/v1/projects/658861d3a1e4922afe4f128c"
+					},
+					"response": []
+				},
+				{
+					"name": "updateProject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"deneme\",\r\n    \"description\": \"acisdfsdfsklama\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/api/v1/projects/658861d3a1e4922afe4f128c"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProjectByUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/api/v1/projects/user/658851e853b471391ada728f"
+					},
+					"response": []
+				},
+				{
+					"name": "getProjectById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/api/v1/projects/658861d3a1e4922afe4f128c"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
