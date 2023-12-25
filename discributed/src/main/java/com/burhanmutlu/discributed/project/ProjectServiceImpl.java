@@ -20,18 +20,12 @@ public class ProjectServiceImpl implements ProjectService{
     private ProjectRepository projectRepository;
 
     @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
     private ProjectMapper projectMapper;
 
     @Override
-    public List<ProjectResponse> getAllProjectByUserId(String id) {
-        User user = userRepository.findById(id).orElseThrow(() -> {
-            throw new UserNotFoundException();
-        });
+    public List<ProjectResponse> getAllProject() {
         List<ProjectResponse> projectResponses = new ArrayList<>();
-        projectRepository.findByUser(user).forEach(project -> {
+        projectRepository.findAll().forEach(project -> {
             projectResponses.add(projectMapper.toProjectResponse(project));
         });
         return projectResponses;
@@ -46,12 +40,8 @@ public class ProjectServiceImpl implements ProjectService{
     }
 
     @Override
-    public ProjectResponse createProjectByUserId(String id, ProjectRequest projectRequest) {
-        User user = userRepository.findById(id).orElseThrow(()-> {
-            throw new UserNotFoundException();
-        });
+    public ProjectResponse createProject(ProjectRequest projectRequest) {
         Project project = projectMapper.toProject(projectRequest);
-        project.setUser(user);
         project.setCreatedAt(new Date());
         project.setLastModified(new Date());
         projectRepository.save(project);

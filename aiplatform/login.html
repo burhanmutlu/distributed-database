@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BurNes - Artificial Intelligence HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+  
+     <!-- Favicon -->
+     <link href="img/favicon.ico" rel="icon">
+
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+         rel="stylesheet">
+ 
+     <!-- Icon Font Stylesheet -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+ 
+     <!-- Libraries Stylesheet -->
+     <link href="lib/animate/animate.min.css" rel="stylesheet">
+     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+ 
+     <!-- Customized Bootstrap Stylesheet -->
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+     <!-- Template Stylesheet -->
+     <link href="css/style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+
+    <!-- Libraries Stylesheet -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    
+
+
+</head>
+<style>
+    body{
+	margin:0;
+	color:#6a6f8c;
+	background:rgb(81, 149, 195);
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+.login-box{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	background:url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-snip{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(3, 102, 156, 0.9)
+}
+.login-snip .login,
+.login-snip .sign-up-form{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-snip .sign-in,
+.login-snip .sign-up,
+.login-space .group .check{
+	display:none;
+}
+.login-snip .tab,
+.login-space .group .label,
+.login-space .group .button{
+	text-transform:uppercase;
+}
+.login-snip .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-snip .sign-in:checked + .tab,
+.login-snip .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+.login-space{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.login-space .group{
+	margin-bottom:15px;
+}
+.login-space .group .label,
+.login-space .group .input,
+.login-space .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-space .group .input,
+.login-space .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.login-space .group input[data-type="password"]{
+	-webkit-text-security:circle;
+}
+.login-space .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+.login-space .group .button{
+	background:#1161ee;
+}
+.login-space .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-space .group label .icon:before,
+.login-space .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-space .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-space .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-space .group .check:checked + label{
+	color:#fff;
+}
+.login-space .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-space .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-space .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-snip .sign-in:checked + .tab + .sign-up + .tab + .login-space .login{
+	transform:rotate(0);
+}
+.login-snip .sign-up:checked + .tab + .login-space .sign-up-form{
+	transform:rotate(0);
+}
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot{
+	text-align:center;
+}
+.card{
+	width: 500px;
+	left: 100px;
+}
+
+::placeholder{
+color: #b3b3b3;
+} 
+</style>
+<body>
+
+       <!-- Spinner Start -->
+       <div id="spinner"
+       class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+       <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+           <span class="sr-only">Loading...</span>
+       </div>
+   </div>
+   <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-white">AI<span class="text-dark">.</span>BurNes</h1>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Anasayfa</a>
+				<a href="customers.html" class="nav-item nav-link">Müşterilerimiz</a>
+                        <a href="project.html" class="nav-item nav-link">Proje</a>
+                        <a href="login.html" class="nav-item nav-link active">Giriş-Kayıt</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+
+
+    <div class ="row">
+        <div class="col-md-6 mx-auto p-0">
+            <div class="card">
+    <div class="login-box">
+        <div class="login-snip">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Giriş Yap</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Kayıt Ol</label>
+            <div class="login-space">
+                <div class="login">
+                    <div class="group">
+                        <label for="user" class="label">Kullanıcı Adı</label>
+                        <input id="user" type="text" class="input"  placeholder="Kullanıcı adını gir">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Şifre</label>
+                        <input id="pass" type="password" class="input" data-type="password" placeholder="şifrenizi Giriniz">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Giriş Yap">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot">
+                        
+                    </div>
+                </div>
+
+
+
+
+                <div class="sign-up-form">
+                    <div class="group">
+                        <label for="name" class="label">Ad Soyad </label>
+                        <input id="name" name="name" type="text" class="input" placeholder="ad soyad giriniz">
+                    </div>
+                    <div class="group">
+                        <label for="username" class="label">Kullanıcı Adı</label>
+                        <input id="username" name="username" type="text" class="input" placeholder="kullanıcı adı oluştur">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Şifre</label>
+                        <input id="registerpass" name="registerpass" type="password" data-type="password" class="input" placeholder="şifre oluştur">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Kayıt ol" onclick="submitForm()">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot">
+
+
+                    <script>
+                        function submitForm() {
+                        const username = document.getElementById('username').value;
+                        const password = document.getElementById('registerpass').value;
+                        const name = document.getElementById('name').value;
+
+                        // API'ye POST isteği yap
+                        fetch('http://localhost:8082/api/v1/users', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                username: username,
+                                password: password,
+                                name: name,
+                            }),
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            location.href = 'customers.html';
+                        })
+                        .catch(error => console.error('Kayıt işlemi sırasında bir hata oluştu:', error));
+        
+                    }
+                    </script>
+
+
+                
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    </div>
+    </div>
+    </div>
+
+    <br>
+    
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-white">AI<span class="text-primary">.</span>BurNes</h1>
+                    </a>
+                 
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Bize Ulaşmak İçin</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>mersin erdemli</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+90 00 2390 00</p>
+                    <p><i class="fa fa-envelope me-3"></i>burnesofficial@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+              
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">İlgi Alanlarımız</h5>
+                    <a class="btn btn-link" href="">Robotic Automation</a>
+                    <a class="btn btn-link" href="">Machine learning</a>
+                    <a class="btn btn-link" href="">Predictive Analysis</a>
+                    <a class="btn btn-link" href="">Data Science</a>
+                    <a class="btn btn-link" href="">Robot Technology</a>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+ <script src="js/main.js"></script>
+
+
+  </body>
+  </html>
+  

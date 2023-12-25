@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface ProjectService {
 
-    List<ProjectResponse> getAllProjectByUserId(String id);
+    List<ProjectResponse> getAllProject();
 
     ProjectResponse getProjectById(String id);
 
-    ProjectResponse createProjectByUserId(String id, ProjectRequest projectRequest);
+    ProjectResponse createProject(ProjectRequest projectRequest);
 
     ProjectResponse updateProjectById(String id, ProjectRequest projectRequest);
 

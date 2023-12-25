@@ -17,16 +17,15 @@ public class ProjectController {
     @Autowired
     private ProjectService projectService;
 
-    @PostMapping("/projects/user/{id}")
-    public ResponseEntity<ProjectResponse> createProjectById(@RequestBody ProjectRequest projectRequest,
-                                                             @PathVariable String id) {
-        ProjectResponse projectResponse = projectService.createProjectByUserId(id, projectRequest);
+    @PostMapping("/projects")
+    public ResponseEntity<ProjectResponse> createProject(@RequestBody ProjectRequest projectRequest) {
+        ProjectResponse projectResponse = projectService.createProject(projectRequest);
         return ResponseEntity.ok(projectResponse);
     }
 
-    @GetMapping("/projects/user/{id}")
-    public ResponseEntity<List<ProjectResponse>> getAllProjectByUserId(@PathVariable String id) {
-        List<ProjectResponse> projectResponses = projectService.getAllProjectByUserId(id);
+    @GetMapping("/projects")
+    public ResponseEntity<List<ProjectResponse>> getAllProject() {
+        List<ProjectResponse> projectResponses = projectService.getAllProject();
         return ResponseEntity.ok(projectResponses);
     }
 
